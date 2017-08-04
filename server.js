@@ -59,6 +59,13 @@ var app = express();
    });
  });
 
+ app.use('/projects',(req, res) => {
+    res.render('projects.hbs', {
+      pageTitle: 'Projects',
+      welcomeMessage: 'welcome to the projects page'
+    });
+ });
+
 app.listen(port,() => {
   console.log(`server is up on port ${port}`);
 }); //app.listen() binding our app to port in our machine.
